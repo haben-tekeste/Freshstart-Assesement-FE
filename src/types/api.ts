@@ -5,6 +5,16 @@ export type Item = {
   price: number;
 };
 
+export type itemIDApiResponse = {
+  message: string;
+  itemIds: [
+    {
+      id: string;
+      name: string;
+    }
+  ];
+};
+
 export type Pagination = {
   pageIndex: number;
   pageSize: number;

@@ -12,7 +12,7 @@ function Dashboard() {
   const [openModal, setOpenModal] = useState(false);
   const handleOpenModal = () => setOpenModal(true);
   const [addItem, { isSuccess, isError }] = useAddItemMutation();
-  const handleAddItem = (data: Item, id?: string) => {
+  const handleAddItem = (data: Item) => {
     addItem(data);
   };
 

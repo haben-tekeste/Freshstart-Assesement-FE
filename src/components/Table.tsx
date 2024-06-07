@@ -35,7 +35,7 @@ const Table = () => {
     if (itemID.current) deleteItem(itemID.current);
   };
 
-  const handleEditItem = (data: Item, id?: string) => {
+  const handleEditItem = (data: Item) => {
     editItem(data);
   };
 

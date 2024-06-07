@@ -1,5 +1,10 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { Item, itemApiResponse, Pagination } from "src/types/api";
+import {
+  Item,
+  itemApiResponse,
+  Pagination,
+  itemIDApiResponse,
+} from "src/types/api";
 import.meta.env.VITE_BASE_URL;
 
 export const itemsApi = createApi({
@@ -45,7 +50,7 @@ export const itemsApi = createApi({
         method: "GET",
       }),
     }),
-    getAllItemsId: builder.query({
+    getAllItemsId: builder.query<itemIDApiResponse, void>({
       query: () => ({
         url: "/ids",
         method: "GET",
@@ -69,5 +74,5 @@ export const {
   useDeleteItemMutation,
   useGetItemQuery,
   useGetAllItemsIdQuery,
-  useLazyGetReportQuery
+  useLazyGetReportQuery,
 } = itemsApi;

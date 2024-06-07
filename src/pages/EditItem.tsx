@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, SyntheticEvent } from "react";
 import { Grid } from "@mui/material";
 import { useForm, SubmitHandler } from "react-hook-form";
 import {
@@ -58,7 +58,7 @@ function EditItem() {
         <div className="mt-6">
           <Autocomplete
             value={editID}
-            onChange={(event: any, newValue) => {
+            onChange={(_event: SyntheticEvent, newValue) => {
               if (newValue === null) {
                 setEditID(null);
               } else {

@@ -8,7 +8,7 @@ function Home() {
   const [getReport, {isLoading, isError}] = useLazyGetReportQuery()
   const handleGenerateReport = async () => {
     try {
-      const response = await getReport().unwrap();
+      const response = await getReport({}).unwrap();
       
       // Check if response is a blob
       if (!(response instanceof Blob)) {
