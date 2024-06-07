@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .bg-img {
+    /* ... */
+    background-image: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.4) 100%
+      ),
+      url("./assets/inventory.jpeg");
+    /* background-image: url("./assets/inventory.jpeg"); */
+  }
+  .spinner {
+    @apply border-4 border-solid border-gray-300 border-t-blue-500 rounded-full w-6 h-6;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
